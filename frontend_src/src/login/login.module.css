@@ -98,7 +98,9 @@
     outline: none;
     border: 2px solid #0061ff;
     background-color: #f8fafc;
-    box- {
+}
+
+.passdiv {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -142,8 +144,8 @@
     color: #94a3b8;
 }
 
-.passdiv input:focus 6, 6);
-}, .verbtn {
+.verbtn,
+.logincontainerbutton {
     padding: 12px 20px;
     margin: 20px 0 15px 0;
     border: none;
@@ -163,28 +165,35 @@
     align-self: center;
 }
 
-.logincontainerbutton:hover:not(:disabled), .verbtn:hover:not(:disabled) {
+.logincontainerbutton:hover:not(:disabled),
+.verbtn:hover:not(:disabled) {
     transform: translateY(-4px);
     cursor: pointer;
     background: linear-gradient(135deg, #0051db, #50e5ed);
     box-shadow: 0 8px 25px rgba(0, 97, 255, 0.4);
 }
 
-.logincontainerbutton:active:not(:disabled), .verbtn:active:not(:disabled) {
+.logincontainerbutton:active:not(:disabled),
+.verbtn:active:not(:disabled) {
     transform: translateY(-2px);
 }
 
 .forgetpass {
-    margin: 10px  {
+    margin: 10px 0;
     text-decoration: underline;
     color: #0061ff;
 }
 
 .logincontainerspan {
-    color: #60effd;
+    color: #0862f3;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 600;
     transition: all 0.2s ease;
+}
+
+.logincontainerspan:hover {
+    color: #0061ff;
+    text-decoration: underline;
 }
 
 .ghr {
@@ -192,33 +201,6 @@
     border: none;
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(96, 239, 255, 0.3), transparent);
-}
-
-.logincontainerspan:hover {
-    color: #0061ff;
-     text-decoration: underline;
-    color: #0862f3;
-
-}
-
-.logincontainerspan {
-    color: #0862f3;
-    cursor: pointer;
-    font-weight: 600;
-    
-}
-.ghr{ {
-    max-width: 90%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 35px 40px;
-    background: rgba(26, 26, 46, 0.7);
-    border-radius: 25px;
-    border: 1px solid rgba(96, 239, 255, 0.1);
-    align-items: center;
-    box-shadow: 0 8px 32px rgba(0, 97, 255, 0.15);
-    backdrop-filter: blur(10px);
 }
 
 .otpcontainer {
@@ -242,75 +224,56 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.otpinp: {
-    text-decoration: none;
-    color: #60effd;
-    align-self: flex-start;
-    font-weight: 600;
-    transition: all 0.2s ease;
+.otpinp::placeholder {
+    color: #6b7280;
+    font-size: 24px;
 }
-
-.linkdis:hover {
-    color: #0061ff;
-    text-decoration: underline
 
 .otpinp:focus {
     outline: none;
     border: 2px solid #0061ff;
     background-color: #f8fafc;
-    box-shadow: 0 0 0 3px rgba(0, 97, 255, 0.1); width:100px;
-    font-size: 50px;
-    border-radius: 10px;
-   
-}
-.otpinp::placeholder{
-    color: black;
-    font-size: 39px;
-}
-.otpinp:focus{
-    outline: none;
-    border: 0.2rem solid  #f1eded;
-   
+    box-shadow: 0 0 0 3px rgba(0, 97, 255, 0.1);
 }
 
-.linkdis{
+.linkdis {
     text-decoration: none;
     color: #0862f3;
-    align-self:flex-start;
+    align-self: flex-start;
 }
 
+.linkdis:hover {
+    color: #0061ff;
+    text-decoration: underline;
+}
 
 @media screen and (max-width:1000px) {
-    .otpinp{
+    .otpinp {
         width: 50px;
         font-size: 25px;
     }
-    .verifycontainer{
+    .verifycontainer {
         width: 80%;
     }
-    .otpinp::placeholder{
+    .otpinp::placeholder {
         font-size: 25px;
     }
 }
 
 @media screen and (max-width:555px) {
-
-    .verifycontainer{
+    .verifycontainer {
         width: 80%;
     }
-
     .nav h1 {
-        font-size:29px;
+        font-size: 29px;
         padding: 3px 6px;
     }
-    .otpinp{
+    .otpinp {
         width: 30px;
         font-size: 15px;
         margin: 4px;
     }
-
-    .otpinp::placeholder{
+    .otpinp::placeholder {
         font-size: 15px;
     }
-    
 }
